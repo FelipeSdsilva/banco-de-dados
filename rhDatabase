@@ -1,0 +1,36 @@
+CREATE DATABASE db_rh;
+
+USE db_rh;
+
+CREATE TABLE colaboradores(
+    id BIGINT AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    cargo VARCHAR(255) NOT NULL,
+    salario DECIMAL NOT NULL,
+    telefone VARCHAR(30),
+    PRIMARY KEY(id)
+);
+
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Felipe Sousa","Desenvolvedor FullStack", 3390.00,"11 95479-5119");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Vinicius Almeida","Desenvolvedor Backend", 9000.00,"11 95007-7770");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Aline Alibaba","Desenvolvedor Frontend", 2000.00,"11 97753-5122");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Samuel Souza","Desenvolvedor Android", 10000.00,"11 95555-5779");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Ronaldinho Gaucho","Analista de dados", 1000.00,"11 95543-5559");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Souza ","Desenvoldor Senior Java", 4000.00,"11 95767-5469");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Jair","Analista de dados", 1000.00,"11 95443-3245");
+INSERT INTO colaboradores (nome, cargo,salario,telefone) VALUES ("Neto","Estagiario", 1000.00,"11 97732-4232");
+
+SELECT *
+FROM colaboradores ;
+
+SELECT *
+FROM colaboradores 
+WHERE salario > 2000;
+
+SELECT *
+FROM colaboradores 
+WHERE salario < 2000;
+
+UPDATE colaboradores 
+SET salario = 3000
+WHERE salario < 2000;
